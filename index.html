@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/gallery.css">
+    </head>
+    <body>
+        
+        <header id="header-main">
+            <nav class="wrapper-main">
+                <a href="#"><img src="img/logo" alt="PhotoCut logo"></a>
+                <ul>
+                    <li><a href="">My Work</a></li>
+                    <li><a href="">About Me</a></li>
+                    <li><a href="">Contact Me</a></li>
+                    <li><a href="">Instagram</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="index-gallery" class="wrapper-gallery">
+            <p>Naziya Sultana</p>
+            <h2>My Photo Gallery</h2>
+            <div class="gallery-img img1">
+                <div><a href="#">"This is a Title"</a></div>
+            </div>
+            <div class="gallery-img img2">
+                <div><a href="#">"This is a Title"</a></div>
+            </div>
+            <div class="css-img img3">
+                <div><a href="#">"This is a Title"</a></div>
+            </div>
+            <div class="css-img img4">
+                <div><a href="#">"This is a Title"</a></div>
+            </div>
+            <div class="css-img img5">
+                <div><a href="#">"This is a Title"</a></div>
+            </div>
+            <div class="css-img img6">
+                <div><a href="#">"This is a Title"</a></div>
+            </div>
+            <div class="css-img img7">
+                <div><a href="#">"This is a Title"</a></div>
+            </div>
+            <div class="css-img img8">
+                <div><a href="#">"This is a Title"</a></div>
+            </div>
+            <div class="css-img img9">
+                <div><a href="#">"This is a Title"</a></div>
+            </div>
+            <div class="css-img img10">
+                <div><a href="#">"This is a Title"</a></div>
+            </div>
+        </section>
+        <script src="js/css.js"></script>
+    </body>
+</html>
+
+----
+
+gallery.css
+
+/* Gallery container */
+#index-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    grid-template-areas: 
+    "gallery-p gallery-p gallery-p gallery-p"
+    "gallery-h2 gallery-h2 gallery-h2 gallery-h2"
+    "img1 img2 img3 img4 img5 img6 img7 img8 img9 img10"
+    "img5 img6 img3 img7"
+
+}
+
+#index-gallery .gallery-img {
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+/* Images */
+#index-gallery p {
+    grid-area: gallery-p;
+ }
+ #index-gallery p {
+    grid-area: gallery-h2;
+ }
+ #index-gallery .img1 {
+    grid-area: img1;
+    background-image: url("../img/thumb/img1.jpg");
+ }
+ #index-gallery .img2 {
+    grid-area: img2;
+    background-image: url("../img/thumb/img2.jpg");
+ }
+ #index-gallery .img3 {
+    grid-area: img3;
+    background-image: url("../img/thumb/img3.jpg");
+    height: 610;
+ }
+ #index-gallery .img4 {
+    grid-area: img4;
+    background-image: url("../img/thumb/img4.jpg");
+ }
+ #index-gallery .img5 {
+    grid-area: img5;
+    background-image: url("../img/thumb/img5.jpg");
+ }
+ #index-gallery .img6 {
+    grid-area: img6;
+    background-image: url("../img/thumb/img6.jpg");
+ }
+ #index-gallery .img7 {
+    grid-area: img7;
+    background-image: url("../img/thumb/img7.jpg");
+ }
+ #index-gallery .img8 {
+    grid-area: img8;
+    background-image: url("../img/thumb/img8.jpg");
+ }
+ #index-gallery .img9 {
+    grid-area: img9;
+    background-image: url("../img/thumb/img9.jpg");
+ }
+ #index-gallery .img10 {
+    grid-area: img10;
+    background-image: url("../img/thumb/img10.jpg");
+ }
+
+ /* Gallery image titles */
+ .gallery-img div  {
+     width: 100;
+     height: 100;
+     background-color: #000000;
+     opacity: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }  
+
+ .gallery-img a  {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+}  
+
+.gallery-img div:hover  {
+   opacity: 0.8;
+   transition: all ease-in-out 100ms;
+}  
+
+-----
+
+css.js
+
+let galleryImages = document.querySelectorAll(".gallery-img");
+let getLatestOpenedImg;
+let windowWidth = window.innerWidth;
+
+if(galleryImages) {
+    galleryImages.forEach(function() {
+       image.onclick = function() {
+          let getElementCss = window.getCpmputedStyle();   
+       }
+    });
+}
+
+----
+
+main.js
+
+/* Wrappers */
+.wrapper-main {
+    margin: 0 20vw;
+}
+
+.wrapper-gallery {
+    margin: 0 20vw;
+}
+
+/* Default text styling */
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px; 
+}
+
+/* Page styling */
+#header-main nav {
+    display: grid;
+    grid-template-columns: 240px 3fr;
+    grid-template-rows: auto;
+    padding-bottom: 60px;
+}
+
+#header-main nav img {
+    height: 50px;
+    margin: 25px 0;
+    border-radius: 50px;
+}
+
+#header-main nav ul {
+   justify-self: end;
+}
+
+#header-main nav ul li {
+    display: inline-block;
+    list-style: none;
+    justify-self: end;
+    margin: 40px 0 40px 30px;
+ }
+
+ #header-main nav ul li a {
+    color: #111111;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+ }
